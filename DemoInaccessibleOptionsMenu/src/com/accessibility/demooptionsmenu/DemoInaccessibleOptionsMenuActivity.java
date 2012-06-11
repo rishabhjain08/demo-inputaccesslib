@@ -5,14 +5,28 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 public class DemoInaccessibleOptionsMenuActivity extends Activity {
     /** Called when the activity is first created. */
 	private int resumeCount = 0;
-    @Override
+	
+	private Spinner spinner;
+	private static String[] listItems = {"Item1", "Item2", "Item3", "Item4","Item5"};
+
+	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        
+        spinner = (Spinner)findViewById(R.id.Spinner01);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.select_dialog_item);
+        for(int i=0;i<listItems.length;i++){
+        	adapter.add(listItems[i]);
+        }
+        spinner.setAdapter(adapter);
     }
     
     @Override

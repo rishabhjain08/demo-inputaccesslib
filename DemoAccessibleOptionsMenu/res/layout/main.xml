@@ -8,5 +8,12 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/hello" />
+    
+     <ca.idi.tecla.lib.Spinner
+         android:layout_height="wrap_content" 
+         android:id="@+id/Spinner01" 
+         android:layout_width="fill_parent" 
+         android:prompt="@string/spinner_dialog" />
+
 
 </LinearLayout>

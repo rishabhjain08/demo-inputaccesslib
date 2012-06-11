@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
@@ -39,7 +40,6 @@ public class MenuDialog extends Dialog {
 			}
 			index++;
 		}
-		setTitle("Menu");
 		String[] item_title = new String[menuItems.size()];
 		Drawable[] item_icon = new Drawable[menuItems.size()];
 		for(int i=0;i<item_title.length;i++){
@@ -74,6 +74,7 @@ public class MenuDialog extends Dialog {
 	public MenuDialog(Context context, Menu menu) {
 		super(context);
 		mOptionsMenu = menu;
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 	}
 
 	private void setSelectedMenuItem(MenuItem menu_item){
