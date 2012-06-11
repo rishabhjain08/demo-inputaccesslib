@@ -3,5 +3,6 @@
 
     <string name="hello">Hello World, DemoInaccessibleOptionsMenuActivity!</string>
     <string name="app_name">DemoInaccessibleOptionsMenu</string>
-
+	<string name="spinner_dialog">Select an item</string>
+    
 </resources>
