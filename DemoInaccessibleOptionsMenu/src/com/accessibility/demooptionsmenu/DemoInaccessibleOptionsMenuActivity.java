@@ -10,6 +10,7 @@ import android.widget.Spinner;
 
 public class DemoInaccessibleOptionsMenuActivity extends Activity {
     /** Called when the activity is first created. */
+	//some variable
 	private int resumeCount = 0;
 	
 	private Spinner spinner;

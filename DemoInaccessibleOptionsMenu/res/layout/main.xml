@@ -11,7 +11,7 @@
     
      <Spinner 
          android:layout_height="wrap_content" 
-         android:id="@+id/Spinner01" 
+         android:id="@+id/Spinner01"
          android:layout_width="fill_parent" 
          android:prompt="@string/spinner_dialog" />
 
