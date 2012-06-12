@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 
 public class DemoAccessibleOptionsMenuActivity extends Activity {
     /** Called when the activity is first created. */
+	//some variable
 	private int resumeCount = 0;
 
 	//Notice that instead of android.widget.Spinner ca.idi.tecla.lib.Spinner has been used
@@ -22,7 +23,11 @@ public class DemoAccessibleOptionsMenuActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        //make this call to make the activity's options menu accessible
+        inputAccess.onCreate();
         
+        //using ca.idi.tecla.lib.Spinner instead of android.widget.Spinner
         spinner = (ca.idi.tecla.lib.Spinner)findViewById(R.id.Spinner01);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.select_dialog_multichoice);
@@ -45,22 +50,7 @@ public class DemoAccessibleOptionsMenuActivity extends Activity {
     @Override
     public void onResume(){
     	resumeCount++;
-    	//Call this method to make this activity's options menu accessible
-    	inputAccess.onResume();
     	super.onResume();
-    }
-    
-    @Override
-    public void onPause(){
-    	//Call this method to make this activity's options menu accessible
-    	inputAccess.onPause();
-    	super.onPause();
-    }
-    
-	//Define this function to make this activity's options menu accessible if it is not already defined
-    public boolean onPrepareOptionsMenu(Menu menu){
-    	//Call this method to make this activity's options menu accessible
-    	return inputAccess.onPrepareOptionsMenu(menu);
     }
     
     public boolean onOptionsItemSelected(MenuItem menu_item){
