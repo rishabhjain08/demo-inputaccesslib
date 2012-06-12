@@ -1,4 +1,4 @@
 demo-inputaccesslib
 ===================
 
-Demo program to demonstrate the way to use idrc/InputAccessLib
+Demo program to demonstrate the the use of https://github.com/idrc/InputAccessLib
